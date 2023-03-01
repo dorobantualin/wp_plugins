@@ -3,7 +3,7 @@
  * Plugin Name:       Create a Custom Plugin
  * Plugin URI:        https://site-wordpress.ro
  * Description:       A simple plugin that allows you to createa a custom plugin.
- * Version:           2.0.0
+ * Version:           2.0.1
  * Author:            Alin Dorobantu
  * Author URI:        https://site-wordpress.ro
  * Text Domain:       custom-plugin-slug
