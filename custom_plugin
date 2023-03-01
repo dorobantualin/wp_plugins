@@ -1,0 +1,28 @@
+<?php
+/**
+ * Plugin Name:       Create a Custom Plugin
+ * Plugin URI:        https://site-wordpress.ro
+ * Description:       A simple plugin that allows you to createa a custom plugin.
+ * Version:           1.0.0
+ * Author:            Alin Dorobantu
+ * Author URI:        https://site-wordpress.ro
+ * Text Domain:       custom-plugin-slug
+ * License:           GPL v2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ */
+
+
+
+// Register settings using the Settings API
+function wpdocs_register_my_setting() {
+    register_setting( 'my-options-group', 'my-option-name', 'intval' );
+}
+add_action( 'admin_init', 'wpdocs_register_my_setting' );
+
+// Modify capability
+function wpdocs_my_page_capability( $capability ) {
+    return 'edit_others_posts';
+}
+add_filter( 'option_page_capability_my-options-group', 'wpdocs_my_page_capability' );
+
+
